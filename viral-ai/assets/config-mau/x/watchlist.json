@@ -1,0 +1,310 @@
+{
+ "_huong_dan": "Danh sách tài khoản X được quét mỗi lần chạy. filter='none' = lấy mọi bài (tài khoản thuần AI). filter='keyword' = chỉ lấy bài có từ khoá AI (tài khoản hay đăng chủ đề khác). Thêm/bớt handle tuỳ ý, không cần dấu @.",
+ "groups": [
+  {
+   "name": "OpenAI",
+   "kind": "hang",
+   "filter": "none",
+   "handles": [
+    "OpenAI",
+    "OpenAIDevs",
+    "ChatGPT",
+    "OpenAINewsroom",
+    "sama",
+    "gdb",
+    "kevinweil",
+    "thsottiaux",
+    "markchen90"
+   ]
+  },
+  {
+   "name": "Anthropic / Claude",
+   "kind": "hang",
+   "filter": "none",
+   "handles": [
+    "AnthropicAI",
+    "claudeai",
+    "alexalbert__",
+    "bcherny",
+    "_catwu",
+    "trq212",
+    "mikeyk",
+    "DarioAmodei"
+   ]
+  },
+  {
+   "name": "Google / DeepMind / Gemini",
+   "kind": "hang",
+   "filter": "none",
+   "handles": [
+    "GoogleDeepMind",
+    "GoogleAI",
+    "GeminiApp",
+    "antigravity",
+    "GoogleAIStudio",
+    "Gemini_Notebook",
+    "GoogleLabs",
+    "demishassabis",
+    "OfficialLoganK",
+    "JeffDean",
+    "joshwoodward"
+   ]
+  },
+  {
+   "name": "xAI / Grok",
+   "kind": "hang",
+   "filter": "none",
+   "handles": [
+    "xai",
+    "grok"
+   ]
+  },
+  {
+   "name": "Meta AI",
+   "kind": "hang",
+   "filter": "none",
+   "handles": [
+    "AIatMeta",
+    "ylecun",
+    "alexandr_wang"
+   ]
+  },
+  {
+   "name": "Microsoft",
+   "kind": "hang",
+   "filter": "none",
+   "handles": [
+    "MSFTResearch",
+    "Copilot",
+    "mustafasuleyman"
+   ]
+  },
+  {
+   "name": "NVIDIA",
+   "kind": "hang",
+   "filter": "none",
+   "handles": [
+    "NVIDIAAI",
+    "DrJimFan"
+   ]
+  },
+  {
+   "name": "Lab & mô hình khác",
+   "kind": "hang",
+   "filter": "none",
+   "handles": [
+    "MistralAI",
+    "deepseek_ai",
+    "Alibaba_Qwen",
+    "huggingface",
+    "ClementDelangue",
+    "perplexity_ai",
+    "AravSrinivas",
+    "thinkymachines",
+    "miramurati",
+    "ilyasut",
+    "togethercompute",
+    "ollama"
+   ]
+  },
+  {
+   "name": "Công cụ code & agent",
+   "kind": "hang",
+   "filter": "none",
+   "handles": [
+    "cursor_ai",
+    "Replit",
+    "amasad",
+    "boltdotnew",
+    "v0",
+    "cognition",
+    "ManusAI",
+    "genspark_ai",
+    "n8n_io",
+    "LangChain",
+    "hwchase17",
+    "llama_index",
+    "jerryjliu0"
+   ]
+  },
+  {
+   "name": "AI hình ảnh / video / giọng nói",
+   "kind": "hang",
+   "filter": "none",
+   "handles": [
+    "midjourney",
+    "runwayml",
+    "c_valenzuelab",
+    "pika_labs",
+    "LumaLabsAI",
+    "ElevenLabs",
+    "HeyGen",
+    "Kling_ai",
+    "higgsfield_ai",
+    "higgsfield",
+    "suno"
+   ]
+  },
+  {
+   "name": "Robot",
+   "kind": "hang",
+   "filter": "none",
+   "handles": [
+    "Figure_robot",
+    "adcock_brett",
+    "Tesla_Optimus",
+    "UnitreeRobotics"
+   ]
+  },
+  {
+   "name": "Lãnh đạo hay đăng chủ đề khác (lọc từ khoá)",
+   "kind": "lanh-dao",
+   "filter": "keyword",
+   "handles": [
+    "elonmusk",
+    "sundarpichai",
+    "satyanadella",
+    "IBM",
+    "ArvindKrishna",
+    "nvidia",
+    "rauchg",
+    "levie",
+    "garrytan",
+    "paulg",
+    "DavidSacks"
+   ]
+  },
+  {
+   "name": "Nhà nghiên cứu & tiếng nói chuyên môn",
+   "kind": "kol",
+   "filter": "none",
+   "handles": [
+    "karpathy",
+    "AndrewYNg",
+    "drfeifei",
+    "geoffreyhinton",
+    "fchollet",
+    "GaryMarcus",
+    "emollick",
+    "polynoamial",
+    "tszzl",
+    "hardmaru",
+    "natolambert",
+    "Yuchenj_UW",
+    "simonw",
+    "swyx",
+    "chipro",
+    "quocleix"
+   ]
+  },
+  {
+   "name": "Trang tin & người tổng hợp AI (KOC)",
+   "kind": "koc",
+   "filter": "none",
+   "handles": [
+    "rowancheung",
+    "TheRundownAI",
+    "_akhaliq",
+    "rohanpaul_ai",
+    "testingcatalog",
+    "btibor91",
+    "kimmonismus",
+    "scaling01",
+    "AndrewCurran_",
+    "minchoi",
+    "MatthewBerman",
+    "mreflow",
+    "omarsar0",
+    "dair_ai",
+    "deedydas",
+    "bindureddy",
+    "ai_for_success",
+    "AISafetyMemes",
+    "ArtificialAnlys",
+    "arena",
+    "METR_Evals",
+    "EpochAIResearch",
+    "heyshrutimishra",
+    "itsPaulAi",
+    "dr_cintas",
+    "hasantoxr",
+    "godofprompt",
+    "alliekmiller",
+    "LinusEkenstam"
+   ]
+  },
+  {
+   "name": "Builder & người sáng tạo bằng AI",
+   "kind": "koc",
+   "filter": "keyword",
+   "handles": [
+    "levelsio",
+    "mckaywrigley",
+    "rileybrown",
+    "mattshumer_",
+    "steipete",
+    "skirano",
+    "ammaar",
+    "petergyang",
+    "lennysan",
+    "gregisenberg",
+    "theo",
+    "bilawalsidhu",
+    "nickfloats",
+    "venturetwins",
+    "EHuanglu",
+    "cocktailpeanut",
+    "AlexFinn",
+    "gregkamradt",
+    "nutlope",
+    "marclou",
+    "tibo_maker",
+    "poteto",
+    "everestchris6"
+   ]
+  },
+  {
+   "name": "Báo chí, quỹ, podcast (lọc từ khoá)",
+   "kind": "bao-chi",
+   "filter": "keyword",
+   "handles": [
+    "TechCrunch",
+    "verge",
+    "theinformation",
+    "a16z",
+    "ycombinator",
+    "lexfridman",
+    "dwarkesh_sp",
+    "WIRED"
+   ]
+  },
+  {
+   "name": "Nhân sự chủ chốt của các hãng (lọc từ khoá)",
+   "kind": "lanh-dao",
+   "filter": "keyword",
+   "handles": [
+    "nikitabier",
+    "ericzakariasson",
+    "felixrieseberg",
+    "addyosmani",
+    "_sholtodouglas",
+    "mntruell",
+    "ajambrosino",
+    "johnschulman2",
+    "amanrsanger",
+    "jackclarkSF",
+    "lilianweng",
+    "janleike",
+    "fidjissimo",
+    "shaneguML",
+    "ibab",
+    "joannejang",
+    "stevenheidel",
+    "natfriedman",
+    "danielgross",
+    "woj_zaremba",
+    "Yuhu_ai_"
+   ]
+  }
+ ]
+}

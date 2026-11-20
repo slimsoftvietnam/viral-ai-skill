@@ -1,0 +1,103 @@
+{
+  "_huong_dan": "Mọi ngưỡng và trọng số của bộ chấm điểm TikTok nằm ở đây. Sửa xong chạy lại là có hiệu lực.",
+
+  "window_hours": 48,
+  "_max_out_ghi_chu": "Số video ứng viên đưa sang bước phân tích, chia rổ theo loại tài khoản: brand = hãng AI; creator = nhà sáng tạo, báo chí quốc tế; vn = nhà sáng tạo Việt; discovery = tìm qua nguồn cần token.",
+  "max_out": {"brand": 12, "creator": 22, "vn": 14, "discovery": 12},
+  "max_picks": 12,
+
+  "min_views": 20000,
+  "_min_views_by_kind_ghi_chu": "Ngưỡng riêng theo loại tài khoản. Kênh Việt nhỏ hơn kênh quốc tế nhiều, nên ngưỡng thấp hơn để vẫn thấy video thắng trong ngách.",
+  "min_views_by_kind": {"vn": 5000},
+
+  "_week_context_ghi_chu": "Video TikTok thường lên chậm hơn bài trên X (đỉnh sau 3–7 ngày). Ngoài cửa sổ 48 giờ, bộ thu thập đưa thêm tối đa max_items video trong 7 ngày vẫn vượt xa mức thường của kênh (nhãn 'đăng trước cửa sổ').",
+  "week_context_days": 7,
+  "week_context": {"min_outlier": 3, "min_views": 50000, "max_items": 12},
+
+  "_baseline_ghi_chu": "Mức thường của một tài khoản = trung vị lượt xem các video khác (không tính video ghim) đã đăng ít nhất N giờ. Cần ít nhất M video mới tính.",
+  "baseline_min_age_hours": 24,
+  "baseline_min_videos": 4,
+
+  "http": {
+    "concurrency": 3,
+    "delay_seconds": 0.4,
+    "timeout_seconds": 25,
+    "retries": 3,
+    "max_baseline_lookups": 25
+  },
+
+  "weights": {
+    "_ghi_chu": "fourth = chất lượng tương tác khi nguồn có số thích/bình luận/chia sẻ/lưu; nếu không có thì là độ lan ra ngoài tệp follower (lượt xem / follower).",
+    "score": {"scale": 0.30, "outlier": 0.30, "velocity": 0.20, "fourth": 0.20}
+  },
+
+  "scales": {
+    "views_floor": 20000,
+    "views_ceiling": 10000000,
+    "outlier_ceiling": 10,
+    "reach_ratio_floor": 0.2,
+    "reach_ratio_ceiling": 10,
+    "velocity_floor": 1000,
+    "velocity_ceiling": 200000,
+    "er_excellent": 0.12,
+    "share_rate_excellent": 0.01,
+    "save_rate_excellent": 0.015,
+    "_ad_ghi_chu": "Video của tài khoản hãng gấp từ ad_outlier_flag lần mức thường bị gắn nhãn nghi chạy quảng cáo và trừ 40% điểm (trừ khi có số tương tác và tỷ lệ tương tác từ ad_er_flag trở lên).",
+    "ad_outlier_flag": 15,
+    "ad_er_flag": 0.01
+  },
+
+  "tiers": {
+    "mega_views": 1000000,
+    "viral_views": 250000,
+    "viral_outlier": 3,
+    "viral_alt_outlier": 5,
+    "viral_alt_views": 100000,
+    "breakout_outlier": 3,
+    "breakout_views": 30000,
+    "rising_max_age_hours": 12,
+    "rising_views_per_hour": 10000
+  },
+
+  "_ai_keywords_ghi_chu": "Áp dụng cho nhóm tài khoản có filter = keyword. Video được coi là về AI khi mô tả có ít nhất 1 từ khoá mạnh, hoặc 2 từ khoá yếu khác nhau. Hashtag cũng được dò (ví dụ #ai, #chatgpt).",
+  "ai_keywords": [
+    "ai", "a.i.", "agi", "llm", "gpt", "chatgpt", "openai", "codex", "sora",
+    "claude", "anthropic", "deepmind", "nano banana", "nanobanana", "notebooklm", "gemini", "veo", "veo3",
+    "grok", "xai", "meta ai", "metaai", "copilot", "deepseek", "qwen", "perplexity", "manus",
+    "midjourney", "kling", "klingai", "elevenlabs", "heygen", "stable diffusion", "runway", "higgsfield", "suno",
+    "cursor", "lovable", "n8n", "mcp", "vibe coding", "vibecoding",
+    "ai agent", "ai agents", "aiagent", "aiagents", "agentic", "chatbot", "generative", "genai",
+    "machine learning", "artificial intelligence", "artificialintelligence", "humanoid", "superintelligence",
+    "aitools", "aitool", "aivideo", "aiart", "aitips", "aihacks", "aitok", "aitrend", "aigenerated", "aifilter", "aiedit",
+    "aimarketing", "aiautomation", "aibusiness", "ainews", "aiforbeginners", "learnai", "prompt engineering", "promptengineering",
+    "trí tuệ nhân tạo", "trituenhantao", "tri tue nhan tao", "congcuai", "công cụ ai", "hocai", "học ai", "meoai", "mẹo ai"
+  ],
+  "ai_keywords_weak": [
+    "model", "models", "agent", "agents", "prompt", "prompts", "automation", "automate", "robot", "robots", "robotics",
+    "optimus", "nvidia", "gpu", "neural", "algorithm", "tech", "technology", "coding", "nocode", "no-code", "workflow",
+    "congnghe", "công nghệ", "tự động hoá", "tudonghoa", "lập trình", "laptrinh"
+  ],
+  "exclude_keywords": ["giveaway", "airdrop", "memecoin", "presale", "onlyfans"],
+
+  "_generic_hashtags_ghi_chu": "Hashtag quá chung, không tính vào bảng hashtag nổi.",
+  "generic_hashtags": ["fyp", "foryou", "foryoupage", "fypシ", "viral", "trending", "xuhuong", "xh", "fypage", "tiktok", "ai", "tech", "technology", "learnontiktok", "congnghe"],
+
+  "context_sources": {
+    "hackernews": true,
+    "hackernews_min_points": 150
+  },
+
+  "optional_keyed": {
+    "_ghi_chu": "Không bắt buộc. Nguồn miễn phí chỉ thấy video của tài khoản trong danh sách và chỉ có lượt xem. Muốn tìm video viral của người lạ theo hashtag và có đủ thích/bình luận/chia sẻ/lưu thì cần một nguồn có token. Apify có gói miễn phí giới hạn hằng tháng. Đặt biến môi trường APIFY_TOKEN rồi đổi apify thành true. CHƯA kiểm thử.",
+    "apify": false,
+    "_apify_bo_sung_ghi_chu": "Hai việc dưới đây tự chạy khi có APIFY_TOKEN, không cần bật apify (khám phá theo hashtag). apify_enrich: lấy thích/bình luận/chia sẻ/lưu cho tối đa apify_enrich_max video nhiều lượt xem nhất đã lọt vòng. apify_failover: kênh mà trang nhúng không trả được thì hỏi lại qua Apify, tối đa apify_failover_max kênh. Tính phí theo số video trả về, từ khoảng 1,70 USD / 1000 video. CHƯA kiểm thử với token thật.",
+    "apify_enrich": true,
+    "apify_enrich_max": 40,
+    "apify_failover": true,
+    "apify_failover_max": 15,
+    "apify_actor": "clockworks~tiktok-scraper",
+    "hashtags": ["ai", "chatgpt", "aitools", "aivideo", "gemini", "claude", "aitips", "trituenhantao"],
+    "search_queries": [],
+    "results_per_query": 30
+  }
+}

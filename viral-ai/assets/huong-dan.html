@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hướng dẫn dùng skill Viral AI</title>
+<style>
+:root{--bg:#faf9f6;--card:#fff;--ink:#1c1b19;--muted:#6b6862;--line:#e3e0d8;--accent:#c2410c;--soft:#fdf1e7;--ok:#15803d;--blue:#1d4ed8;--bluesoft:#eaf0fe;--greensoft:#e8f5ec}
+@media (prefers-color-scheme:dark){:root{--bg:#161513;--card:#1f1e1b;--ink:#f1efe9;--muted:#a19d94;--line:#35332e;--accent:#fb923c;--soft:#2e2219;--ok:#4ade80;--blue:#93b4ff;--bluesoft:#1b2540;--greensoft:#17291d}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px}
+h2{font-size:21px;margin:44px 0 12px;padding-top:8px;border-top:1px solid var(--line)}
+h3{font-size:16px;margin:0 0 4px}
+p{margin:8px 0}
+.lede{font-size:18px;color:var(--muted);max-width:62ch}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0;overflow-x:auto}
+.fig svg{display:block;width:100%;min-width:640px;height:auto}
+.cap{font-size:13.5px;color:var(--muted);margin-top:8px}
+.steps{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:16px 0}
+.step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.num{display:inline-flex;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;align-items:center;justify-content:center;margin-bottom:8px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:12px 0}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:13px;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+.say{font-family:ui-monospace,Consolas,monospace;font-size:14px;background:var(--soft);padding:2px 8px;border-radius:6px;white-space:nowrap}
+.note{background:var(--soft);border-radius:12px;padding:14px 16px;margin:16px 0}
+.tablebox{overflow-x:auto}
+svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;fill:var(--ink)}
+svg .m{fill:var(--muted)}
+svg .box{fill:var(--card);stroke:var(--line);stroke-width:1.5}
+svg .hot{fill:var(--soft);stroke:var(--accent);stroke-width:1.5}
+svg .blue{fill:var(--bluesoft);stroke:var(--blue);stroke-width:1.5}
+svg .green{fill:var(--greensoft);stroke:var(--ok);stroke-width:1.5}
+svg .arr{stroke:var(--muted);stroke-width:2;fill:none;marker-end:url(#a)}
+svg .t{font-weight:700;font-size:15px}
+svg .s{font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">Hướng dẫn sử dụng</span>
+  <h1>Skill Viral AI</h1>
+  <p class="lede">Mỗi ngày skill quét các bài và video về AI đang viral trên X và TikTok, rồi chọn ra vài ý tưởng video cho từng kênh TikTok của bạn. Bạn chỉ cần trò chuyện với Claude bằng tiếng Việt.</p>
+
+  <h2>Toàn cảnh: ba chặng</h2>
+  <div class="fig">
+    <svg viewBox="0 0 860 190" role="img" aria-label="Ba chặng: cài đặt một lần, thiết lập một lần, dùng hằng ngày">
+      <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs>
+      <rect class="box" x="10" y="30" width="240" height="130" rx="12"/>
+      <text class="s m" x="30" y="58">CHẶNG 1 · làm một lần · 2 phút</text>
+      <text class="t" x="30" y="86">Cài skill</text>
+      <text class="s" x="30" y="112">Mở file viral-ai.skill trong Claude</text>
+      <text class="s" x="30" y="132">rồi bấm lưu.</text>
+      <path class="arr" d="M252 95H296"/>
+      <rect class="box" x="300" y="30" width="250" height="130" rx="12"/>
+      <text class="s m" x="320" y="58">CHẶNG 2 · làm một lần · 10 phút</text>
+      <text class="t" x="320" y="86">Kể về kênh của bạn</text>
+      <text class="s" x="320" y="112">Gõ "cài viral-ai". Claude hỏi 3 câu,</text>
+      <text class="s" x="320" y="132">tự đo kênh và lập hồ sơ.</text>
+      <path class="arr" d="M552 95H596"/>
+      <rect class="hot" x="600" y="30" width="250" height="130" rx="12"/>
+      <text class="s m" x="620" y="58">CHẶNG 3 · mỗi ngày · 10–15 phút</text>
+      <text class="t" x="620" y="86">Quét và nhận ý tưởng</text>
+      <text class="s" x="620" y="112">Gõ "quét viral AI hôm nay".</text>
+      <text class="s" x="620" y="132">Nhận báo cáo, chọn ý, viết kịch bản.</text>
+    </svg>
+    <div class="cap">Ở mọi chặng, Claude luôn nói bạn đang ở đâu và gợi ý bước tiếp theo. Không cần nhớ lệnh.</div>
+  </div>
+
+  <h2>Chặng 1: cài skill</h2>
+  <div class="steps">
+    <div class="step"><span class="num">1</span><h3>Nhận file</h3><p>Bạn có một file tên <b>viral-ai.skill</b>.</p></div>
+    <div class="step"><span class="num">2</span><h3>Lưu vào Claude</h3><p>Trong ứng dụng Claude, mở phần <b>Cài đặt → Skills</b> và tải file lên. Nếu Claude gửi file này cho bạn trong cuộc trò chuyện, bấm nút lưu skill ngay trên thẻ file.</p></div>
+    <div class="step"><span class="num">3</span><h3>Gõ câu đầu tiên</h3><p>Mở cuộc trò chuyện mới và gõ <span class="say">cài viral-ai</span>. Phần còn lại Claude dẫn bạn.</p></div>
+  </div>
+  <div class="note"><b>Dùng Claude Code?</b> Giải nén file viral-ai.skill (đây là một file zip) vào thư mục <code>.claude/skills/</code> của dự án, hoặc <code>~/.claude/skills/</code> để dùng ở mọi dự án.</div>
+  <p>Máy cần có Python 3.10 trở lên. Nếu chưa có, Claude sẽ báo và chỉ bạn cách cài: trên Windows mở Microsoft Store, tìm "Python 3.12" rồi bấm Cài đặt.</p>
+
+  <h2>Chặng 2: kể về kênh của bạn</h2>
+  <p>Claude hỏi ba câu. Trả lời bằng lời thường là đủ.</p>
+  <div class="tablebox"><table>
+    <thead><tr><th>Claude hỏi</th><th>Ví dụ câu trả lời</th></tr></thead>
+    <tbody>
+      <tr><td>Bạn có những kênh TikTok nào?</td><td>Gửi link kênh, ví dụ tiktok.com/@tenkenh</td></tr>
+      <tr><td>Mỗi kênh nói với ai?</td><td>"Kênh A cho người đi làm, kênh B cho chủ doanh nghiệp"</td></tr>
+      <tr><td>Bạn đang thích kênh nào, muốn học theo?</td><td>"Kênh X, kênh Y". Không có cũng được</td></tr>
+    </tbody>
+  </table></div>
+  <p>Sau đó Claude tự đo từng kênh (số follower, lượt xem thường ngày, video nào thắng) và lập <b>hồ sơ kênh</b>. Hồ sơ này là bộ lọc: nó quyết định ý tưởng nào hợp kênh nào.</p>
+
+  <h2>Chặng 3: một lượt quét diễn ra thế nào</h2>
+  <div class="fig">
+    <svg viewBox="0 0 860 300" role="img" aria-label="Luồng quét: nguồn, máy chấm điểm, Claude chọn, báo cáo">
+      <rect class="blue" x="10" y="20" width="170" height="70" rx="10"/>
+      <text class="t" x="28" y="48">X</text><text class="s" x="28" y="70">Khoảng 180 tài khoản</text>
+      <rect class="blue" x="10" y="110" width="170" height="70" rx="10"/>
+      <text class="t" x="28" y="138">TikTok</text><text class="s" x="28" y="160">Khoảng 90 kênh</text>
+      <rect class="box" x="10" y="200" width="170" height="70" rx="10"/>
+      <text class="t" x="28" y="228">Hồ sơ kênh</text><text class="s" x="28" y="250">Bộ lọc của riêng bạn</text>
+      <path class="arr" d="M182 55H236"/><path class="arr" d="M182 145H236"/>
+      <rect class="box" x="240" y="40" width="180" height="130" rx="12"/>
+      <text class="s m" x="258" y="66">MÁY LÀM PHẦN SỐ</text>
+      <text class="t" x="258" y="92">Thu thập, chấm điểm</text>
+      <text class="s" x="258" y="116">Lượt xem, tốc độ tăng,</text>
+      <text class="s" x="258" y="134">vượt mức thường mấy lần</text>
+      <text class="s m" x="258" y="156">→ khoảng 40 ứng viên</text>
+      <path class="arr" d="M422 105H466"/>
+      <path class="arr" d="M182 235H540V176"/>
+      <rect class="hot" x="470" y="40" width="180" height="130" rx="12"/>
+      <text class="s m" x="488" y="66">CLAUDE LÀM PHẦN CHỮ</text>
+      <text class="t" x="488" y="92">Chọn qua ba vòng</text>
+      <text class="s" x="488" y="116">Giải thích vì sao viral,</text>
+      <text class="s" x="488" y="134">viết khung kịch bản</text>
+      <text class="s m" x="488" y="156">→ vài ý cho mỗi kênh</text>
+      <path class="arr" d="M652 105H696"/>
+      <rect class="green" x="700" y="40" width="150" height="130" rx="12"/>
+      <text class="s m" x="716" y="66">KẾT QUẢ</text>
+      <text class="t" x="716" y="92">Báo cáo</text>
+      <text class="s" x="716" y="116">Lọc theo kênh,</text>
+      <text class="s" x="716" y="134">có nút chép brief</text>
+    </svg>
+    <div class="cap">Mọi con số trong báo cáo đến từ lượt quét của ngày hôm đó. Claude không tự ước lượng.</div>
+  </div>
+
+  <h2>Ba vòng chọn nội dung</h2>
+  <div class="fig">
+    <svg viewBox="0 0 860 250" role="img" aria-label="Phễu ba vòng chọn nội dung">
+      <path class="box" d="M40 20H820L740 80H120z"/>
+      <text class="t" x="430" y="46" text-anchor="middle">Vòng 1 · Có đáng làm không?</text>
+      <text class="s" x="430" y="66" text-anchor="middle">Về AI trong công việc · có bằng chứng thắng · một người làm xong trong một ngày · chưa từng chọn</text>
+      <path class="box" d="M124 90H736L666 150H194z"/>
+      <text class="t" x="430" y="116" text-anchor="middle">Vòng 2 · Hợp kênh nào?</text>
+      <text class="s" x="430" y="136" text-anchor="middle">Dùng câu hỏi kiểm tra của từng kênh · một nguồn chỉ giao cho một kênh</text>
+      <path class="hot" d="M198 160H662L602 220H258z"/>
+      <text class="t" x="430" y="186" text-anchor="middle">Vòng 3 · Đóng vai gì?</text>
+      <text class="s" x="430" y="206" text-anchor="middle">Chắc thắng · Đi trước · Bắt tin</text>
+    </svg>
+  </div>
+  <div class="steps">
+    <div class="step"><h3>Chắc thắng</h3><p>Công thức đã được chứng minh với khán giả Việt, hoặc đã thắng trên chính kênh của bạn.</p></div>
+    <div class="step"><h3>Đi trước</h3><p>Đang thắng ở nước ngoài, kênh Việt được quét chưa ai làm.</p></div>
+    <div class="step"><h3>Bắt tin</h3><p>Tin hoặc xu hướng trong 48 giờ, kể theo góc của kênh bạn.</p></div>
+  </div>
+
+  <h2>Kênh nào đáng để học theo</h2>
+  <p>Một kênh mẫu phải qua 5 điều kiện. Claude đo giúp ba điều kiện giữa.</p>
+  <div class="tablebox"><table>
+    <thead><tr><th>#</th><th>Điều kiện</th><th>Ngưỡng</th><th>Ai kiểm</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Đúng ngách</td><td>Từ 60% video cùng chủ đề với kênh của bạn</td><td>Claude, qua mô tả video</td></tr>
+      <tr><td>2</td><td>Còn hoạt động</td><td>Từ 2 video mỗi tuần, video mới nhất trong 7 ngày</td><td>Máy đo</td></tr>
+      <tr><td>3</td><td>Thắng lặp lại</td><td>Từ 2 video gấp 3 lần mức thường trong 12 video gần nhất</td><td>Máy đo</td></tr>
+      <tr><td>4</td><td>Đủ lớn</td><td>Video tốt nhất từ 20 nghìn lượt xem</td><td>Máy đo</td></tr>
+      <tr><td>5</td><td>Làm lại được</td><td>Một người, nói trước ống kính hoặc quay màn hình</td><td>Bạn, xem video</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Bạn gõ gì, skill làm gì</h2>
+  <div class="tablebox"><table>
+    <thead><tr><th>Bạn gõ</th><th>Skill làm</th></tr></thead>
+    <tbody>
+      <tr><td><span class="say">quét viral AI hôm nay</span></td><td>Quét X và TikTok, đưa bảng ý tưởng cho từng kênh và link báo cáo</td></tr>
+      <tr><td><span class="say">viết kịch bản ý 2 của kênh A</span></td><td>Viết kịch bản đầy đủ theo giọng của kênh</td></tr>
+      <tr><td><span class="say">kiểm tra kênh @tenkenh</span></td><td>Đo kênh theo 5 điều kiện, nói có nên theo dõi không</td></tr>
+      <tr><td><span class="say">thêm kênh Tên Kênh</span></td><td>Tìm kênh, kiểm, rồi thêm vào danh sách quét nếu đạt</td></tr>
+      <tr><td><span class="say">bỏ kênh @tenkenh</span></td><td>Gỡ khỏi danh sách và ghi nhớ để không thêm lại</td></tr>
+      <tr><td><span class="say">mỗi kênh cho tôi 5 ý tưởng</span></td><td>Đổi số ý tưởng mỗi lần quét</td></tr>
+      <tr><td><span class="say">đặt lịch quét mỗi sáng</span></td><td>Tạo lịch tự chạy, nếu ứng dụng bạn dùng có tính năng đặt lịch</td></tr>
+      <tr><td><span class="say">tôi đang ở bước nào</span></td><td>Báo trạng thái và việc nên làm tiếp</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Đọc báo cáo</h2>
+  <div class="tablebox"><table>
+    <thead><tr><th>Thứ bạn thấy</th><th>Nghĩa là gì</th></tr></thead>
+    <tbody>
+      <tr><td>So mức thường (ví dụ "14 lần")</td><td>Bài này có lượt xem gấp 14 lần các bài khác của cùng tác giả. Đây là dấu hiệu nội dung thắng, không phải kênh thắng</td></tr>
+      <tr><td>Làm ngay / Nên làm / Theo dõi</td><td>Mức gấp. "Theo dõi" là ý còn yếu hoặc phải xem bài gốc trước</td></tr>
+      <tr><td>Lưu ý</td><td>Điều Claude chưa kiểm chứng được. Đọc dòng này trước khi quay</td></tr>
+      <tr><td>Nút "Chép brief"</td><td>Chép toàn bộ khung ý tưởng để dán vào nơi bạn viết kịch bản</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Giới hạn cần biết</h2>
+  <ul>
+    <li>Claude chỉ đọc được phần chữ của bài gốc, không xem được video hay ảnh. Kịch bản là khung, bạn nên xem bài gốc trước khi quay.</li>
+    <li>TikTok chỉ thấy các kênh trong danh sách theo dõi. Danh sách càng sát ngách của bạn, ý tưởng càng trúng.</li>
+    <li>Nguồn miễn phí không có lượt thích và chia sẻ của TikTok. Muốn có thì bật nguồn bổ sung trả phí; hỏi Claude "bật nguồn dự phòng".</li>
+    <li>Ngày ít tin, số ý tưởng chắc tay sẽ ít hơn. Claude nói rõ ý nào còn yếu thay vì bịa cho đủ.</li>
+  </ul>
+</div>
+</body>
+</html>

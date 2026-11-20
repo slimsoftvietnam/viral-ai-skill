@@ -1,0 +1,126 @@
+{
+  "_huong_dan": "Mọi ngưỡng và trọng số của bộ chấm điểm nằm ở đây. Sửa xong chạy lại là có hiệu lực.",
+
+  "window_hours": 48,
+  "_max_out_ghi_chu": "Số bài ứng viên đưa sang bước phân tích, chia 3 rổ: own = bài của tài khoản trong danh sách; amplified = bài người khác được họ repost/quote; discovery = bài tìm qua tìm kiếm.",
+  "max_out_own": 25,
+  "max_out_amplified": 12,
+  "max_out_discovery": 18,
+  "max_picks": 12,
+
+  "_languages_ghi_chu": "Chỉ giữ bài thuộc các ngôn ngữ này với bài tìm được qua tìm kiếm/repost. Để [] nếu muốn lấy mọi ngôn ngữ. Bài của chính tài khoản trong danh sách luôn được giữ.",
+  "languages": ["en"],
+
+  "min_views": 30000,
+  "min_likes": 300,
+
+  "http": {
+    "concurrency": 4,
+    "delay_seconds": 0.25,
+    "timeout_seconds": 20,
+    "retries": 3,
+    "max_baseline_lookups": 30,
+    "syndication_fallback_budget": 20
+  },
+
+  "weights": {
+    "engagement": {"likes": 1, "replies": 2, "bookmarks": 2, "reposts": 3, "quotes": 4},
+    "score": {"scale": 0.30, "outlier": 0.30, "velocity": 0.20, "quality": 0.20},
+    "amplifier_bonus_each": 3,
+    "amplifier_bonus_max": 9
+  },
+
+  "scales": {
+    "views_floor": 30000,
+    "views_ceiling": 10000000,
+    "outlier_ceiling": 10,
+    "reach_ratio_floor": 0.5,
+    "reach_ratio_ceiling": 20,
+    "velocity_floor": 2000,
+    "velocity_ceiling": 300000,
+    "er_excellent": 0.05,
+    "share_rate_excellent": 0.006,
+    "save_rate_excellent": 0.006,
+    "ad_er_floor": 0.004,
+    "ad_er_flag": 0.002
+  },
+
+  "tiers": {
+    "mega_views": 1000000,
+    "viral_views": 250000,
+    "viral_outlier": 3,
+    "viral_er": 0.02,
+    "viral_alt_outlier": 5,
+    "viral_alt_views": 100000,
+    "breakout_outlier": 3,
+    "breakout_views": 50000,
+    "rising_max_age_hours": 12,
+    "rising_views_per_hour": 15000
+  },
+
+  "search_queries": [
+    {"q": "AI", "feed": "top"},
+    {"q": "AI min_faves:5000", "feed": "latest"},
+    {"q": "ChatGPT min_faves:2000", "feed": "latest"},
+    {"q": "OpenAI min_faves:2000", "feed": "latest"},
+    {"q": "GPT min_faves:2000", "feed": "latest"},
+    {"q": "Claude min_faves:2000", "feed": "latest"},
+    {"q": "Anthropic min_faves:2000", "feed": "latest"},
+    {"q": "Gemini min_faves:2000", "feed": "latest"},
+    {"q": "Grok min_faves:3000", "feed": "latest"},
+    {"q": "LLM min_faves:1500", "feed": "latest"},
+    {"q": "AGI min_faves:2000", "feed": "latest"},
+    {"q": "\"AI agent\" min_faves:1500", "feed": "latest"},
+    {"q": "\"AI agents\" min_faves:1500", "feed": "latest"},
+    {"q": "vibe coding min_faves:500", "feed": "latest"},
+    {"q": "Claude Code min_faves:500", "feed": "latest"},
+    {"q": "Codex min_faves:500", "feed": "latest"},
+    {"q": "Cursor AI min_faves:500", "feed": "latest"},
+    {"q": "\"AI video\" min_faves:2000", "feed": "latest"},
+    {"q": "\"made with AI\" min_faves:3000", "feed": "latest"},
+    {"q": "prompt AI min_faves:2000", "feed": "latest"},
+    {"q": "humanoid robot min_faves:3000", "feed": "latest"},
+    {"q": "DeepSeek min_faves:1500", "feed": "latest"},
+    {"q": "NotebookLM min_faves:1000", "feed": "latest"},
+    {"q": "Midjourney min_faves:1500", "feed": "latest"},
+    {"q": "artificial intelligence min_faves:3000", "feed": "latest"}
+  ],
+
+  "_ai_keywords_ghi_chu": "Bài được coi là về AI khi có ít nhất 1 từ khoá mạnh, hoặc 2 từ khoá yếu khác nhau.",
+  "ai_keywords": [
+    "ai", "a.i.", "agi", "asi", "llm", "llms", "gpt", "chatgpt", "openai", "codex",
+    "claude", "anthropic", "deepmind", "nano banana", "notebooklm", "gemini",
+    "grok", "xai", "meta ai", "copilot", "deepseek", "qwen",
+    "perplexity", "windsurf", "n8n", "mcp",
+    "midjourney", "kling", "elevenlabs", "heygen", "stable diffusion",
+    "agentic", "ai agent", "ai agents", "vibe coding", "vibe-coding", "vibecoding",
+    "machine learning", "neural network", "fine-tune", "fine-tuning", "superintelligence",
+    "humanoid", "chatbot", "generative", "open-weights", "hugging face", "artificial intelligence",
+    "language model", "language models", "foundation model", "frontier model", "frontier models"
+  ],
+  "ai_keywords_weak": [
+    "model", "models", "agent", "agents", "prompt", "prompts", "token", "tokens", "sora", "veo",
+    "llama", "mistral", "kimi", "cursor", "lovable", "replit", "manus", "runway", "flux",
+    "neural", "transformer", "diffusion", "inference", "benchmark", "benchmarks", "reasoning",
+    "robot", "robots", "robotics", "optimus", "gpu", "gpus", "nvidia", "compute", "datacenter",
+    "data center", "automation", "training", "weights", "open source", "coding", "evals"
+  ],
+
+  "exclude_keywords": [
+    "giveaway", "airdrop", "$sol", "memecoin", "presale", "onlyfans"
+  ],
+
+  "context_sources": {
+    "hackernews": true,
+    "hackernews_min_points": 150
+  },
+
+  "optional_paid": {
+    "_ghi_chu": "Không bắt buộc. Chỉ bật khi đã đặt biến môi trường XAI_API_KEY. Dùng Grok x_search để tìm thêm bài viral ngoài danh sách, tính phí theo xAI (khoảng 5 USD / 1000 bài).",
+    "xai_x_search": false,
+    "xai_model": "grok-4.7",
+    "_twitterapi_io_ghi_chu": "Nguồn dự phòng cho FxTwitter, có đủ lượt xem và lượt lưu. Chỉ chạy khi đã đặt biến môi trường TWITTERAPI_IO_KEY, và chỉ được gọi khi FxTwitter không trả dữ liệu (tài khoản lỗi, truy vấn tìm kiếm rỗng). Tính phí theo số bài trả về, khoảng 0,15 USD / 1000 bài; mỗi lần gọi tối đa 20 bài. twitterapi_io_max_calls là trần số lần gọi mỗi lượt quét. CHƯA kiểm thử với key thật.",
+    "twitterapi_io": true,
+    "twitterapi_io_max_calls": 60
+  }
+}

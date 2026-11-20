@@ -1,0 +1,160 @@
+{
+ "_huong_dan": "Danh sách tài khoản TikTok theo dõi. Mọi handle dưới đây đã được kiểm tra là tồn tại và còn hoạt động vào ngày 19/11/2026. kind: brand = hãng, creator = nhà sáng tạo và báo chí quốc tế, vn = kênh Việt. filter: none = lấy mọi video (kênh chuyên AI), keyword = chỉ lấy video có từ khoá AI. lang: vi hoặc en. Handle viết không có dấu @. Thêm kênh đối thủ trong ngách của bạn vào nhóm 'Kênh Việt chuyên AI'.",
+ "groups": [
+  {
+   "name": "Hãng AI",
+   "kind": "brand",
+   "filter": "none",
+   "lang": "en",
+   "handles": [
+    "chatgpt",
+    "openai",
+    "googlegemini",
+    "claude",
+    "ibm",
+    "characterai",
+    "sunomusic",
+    "elevenlabs",
+    "adobefirefly",
+    "lumalabsai",
+    "klingai_official"
+   ]
+  },
+  {
+   "name": "Hãng lớn (chỉ lấy video về AI)",
+   "kind": "brand",
+   "filter": "keyword",
+   "lang": "en",
+   "handles": [
+    "google",
+    "capcut",
+    "figma",
+    "salesforce",
+    "nvidiageforce"
+   ]
+  },
+  {
+   "name": "Nhà sáng tạo AI quốc tế",
+   "kind": "creator",
+   "filter": "keyword",
+   "lang": "en",
+   "handles": [
+    "sabrina_ramonov",
+    "rileybrown.ai",
+    "askcatgpt",
+    "adam.digital",
+    "digitalsamaritan",
+    "nate.b.jones",
+    "kanekallaway",
+    "brandnat",
+    "aicenturyclips",
+    "gazi.ai",
+    "tony.aube",
+    "nomadatoast",
+    "sineadbovell",
+    "theaisurfer",
+    "andyhafell",
+    "shedoesai",
+    "immadsal",
+    "gianluca.mauro",
+    "aisavvy",
+    "promptwarrior",
+    "alliekmiller",
+    "rowancheung",
+    "therundownai",
+    "mattvidpro",
+    "gregisenberg",
+    "curiousrefuge",
+    "godofprompt",
+    "heyshrutimishra",
+    "justinfineberg",
+    "tiffintech",
+    "aiotexpert",
+    "rajistics"
+   ]
+  },
+  {
+   "name": "Người có tiếng (chỉ lấy video về AI)",
+   "kind": "creator",
+   "filter": "keyword",
+   "lang": "en",
+   "handles": [
+    "mrwhosetheboss",
+    "neildegrassetyson",
+    "theprimeagen",
+    "ahormozi"
+   ]
+  },
+  {
+   "name": "Báo chí quốc tế (chỉ lấy video về AI)",
+   "kind": "creator",
+   "filter": "keyword",
+   "lang": "en",
+   "handles": [
+    "cnbc",
+    "bloombergbusiness",
+    "theeconomist",
+    "wired",
+    "verge",
+    "techcrunch",
+    "cnetdotcom",
+    "digitaltrends",
+    "tomsguide",
+    "businessinsider",
+    "forbes",
+    "yahoofinance",
+    "morningbrew",
+    "cheddar",
+    "newscientist",
+    "sciencemagazine",
+    "nytimes",
+    "washingtonpost",
+    "guardian",
+    "bbcnews",
+    "vox"
+   ]
+  },
+  {
+   "name": "Kênh Việt chuyên AI",
+   "kind": "vn",
+   "filter": "none",
+   "lang": "vi",
+   "handles": [
+    "hieuanca",
+    "ai5phut",
+    "deaitinh",
+    "dangquyenhocai",
+    "kienchoiai",
+    "ngocthach.ai",
+    "200lab",
+    "caocuongvuai",
+    "taion_aiwork"
+   ]
+  },
+  {
+   "name": "Công nghệ và báo chí Việt (chỉ lấy video về AI)",
+   "kind": "vn",
+   "filter": "keyword",
+   "lang": "vi",
+   "handles": [
+    "genk.vn",
+    "trituenhantao",
+    "vnexpress.official",
+    "dantri.com.vn",
+    "vietnamplus",
+    "kenh14official",
+    "vtv24news",
+    "dunglailaptrinh"
+   ]
+  },
+  {
+   "name": "Hãng công nghệ tại Việt Nam (chỉ lấy video về AI)",
+   "kind": "brand",
+   "filter": "keyword",
+   "lang": "vi",
+   "handles": [
+    "samsungvietnam"
+   ]
+  }
+ ]
+}
